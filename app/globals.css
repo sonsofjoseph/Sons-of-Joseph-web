@@ -1,0 +1,52 @@
+:root {
+  --bg: #f7f4ee;
+  --paper: #fffdf8;
+  --ink: #181716;
+  --muted: #5f5a53;
+  --line: rgba(24, 23, 22, 0.12);
+  --gold: #d8b15a;
+  --white: #ffffff;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, Arial, sans-serif; background: var(--bg); color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.section { padding: 88px 0; }
+.sectionLabel { text-transform: uppercase; letter-spacing: 0.16em; font-size: .75rem; color: var(--muted); margin-bottom: 14px; font-weight: 700; }
+.sectionLabel.light { color: rgba(255,255,255,.78); }
+.hero { min-height: 100vh; color: var(--white); background: linear-gradient(rgba(16,22,18,.56), rgba(16,22,18,.6)), url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1600&q=80') center/cover; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }
+.topbar nav { display: flex; gap: 24px; }
+.brand { font-weight: 800; letter-spacing: .04em; }
+.heroContent { padding: 110px 0 120px; max-width: 760px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .18em; font-weight: 700; font-size: .8rem; opacity: .88; }
+.hero h1, .intro h2, .section h2, .imageBand h2 { font-family: Georgia, serif; line-height: .98; letter-spacing: -.03em; }
+.hero h1 { font-size: clamp(3rem, 7vw, 6rem); margin: 16px 0 20px; }
+.lead { font-size: 1.15rem; line-height: 1.7; max-width: 660px; color: rgba(255,255,255,.9); }
+.heroActions, .supportActions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 18px; border-radius: 999px; font-weight: 700; }
+.buttonPrimary { background: var(--gold); color: #1b160f; }
+.buttonGhost { border: 1px solid rgba(255,255,255,.3); color: var(--white); }
+.buttonSecondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.intro { display: grid; grid-template-columns: 1.35fr .9fr; gap: 24px; margin-top: -72px; position: relative; z-index: 3; }
+.introCard,.quoteCard,.card,.featurePanel,.supportBlock { background: var(--paper); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); }
+.introCard,.quoteCard,.featurePanel,.supportBlock { padding: 32px; }
+.introCard p,.quoteCard p,.card p,.featurePanel p,.supportBlock p { color: var(--muted); line-height: 1.75; }
+.quote { font-size: 1.3rem; color: var(--ink) !important; }
+.intro h2,.section h2,.imageBand h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin: 0 0 18px; }
+.mutedSection { background: #efe8db; }
+.grid4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin-top: 28px; }
+.card { padding: 26px; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.checkList { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 14px; }
+.checkList li { padding: 16px 18px; background: rgba(255,255,255,.7); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.tags span { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: #faf6ee; color: #403b35; font-size: .92rem; }
+.imageBand { padding: 100px 0; color: var(--white); background: linear-gradient(rgba(20,31,24,.72), rgba(20,31,24,.74)), url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1600&q=80') center/cover fixed; }
+.bandContent { display: grid; grid-template-columns: 1.15fr .85fr; gap: 28px; align-items: center; }
+.bandStats { display: grid; gap: 16px; }
+.bandStats div { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); padding: 20px; border-radius: 22px; }
+.supportBlock { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: center; }
+@media (max-width: 760px) { .topbar,.intro,.split,.bandContent,.supportBlock,.grid4 { grid-template-columns: 1fr; flex-direction: column; } .topbar { align-items: flex-start; gap: 16px; } .topbar nav { flex-wrap: wrap; gap: 16px; } }
